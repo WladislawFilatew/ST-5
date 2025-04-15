@@ -23,6 +23,7 @@ public class Sqrt {
             return iter(improve(guess,x),x);
     }
     public double calc() {
+        if (arg <= 0) throw new IllegalArgumentException("arg must be positive (was " + arg + ")");
         return iter(1.0,arg);
     }
 }
